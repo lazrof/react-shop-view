@@ -1,0 +1,49 @@
+{
+    "items":[
+        {
+            "name":"Item 1",
+            "price": 14.2,
+            "type": "Music"
+        },
+        {
+            "name": "Item 2",
+            "price": 11.2,
+            "type": "Music"
+        },
+        {
+            "name": "Item 3",
+            "price": 3.2,
+            "type": "Music"
+        },
+        {
+            "name": "Item 4",
+            "price": 12,
+            "type": "Music"
+        },
+        {
+            "name": "Item 5",
+            "price": 35.2,
+            "type": "Music"
+        }
+    ],
+
+    "cart": [
+        {
+            "name": "Item 1",
+            "price": 14.2,
+            "type": "Music"
+        },
+        {
+            "name": "Item 2",
+            "price": 11.2,
+            "type": "Music"
+        }
+
+    ],
+
+    "customer":{
+        "username":"koopaa",
+        "first_name":"Nunzio",
+        "last_name":"Ruffo"
+    }
+}
