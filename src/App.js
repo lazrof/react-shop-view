@@ -10,7 +10,13 @@ const App = () => {
 	
 	const [state, setState] = useState(shopData);
 
-
+	const addToCartCallback = (productItemData) => {
+		state.cart.push(productItemData)
+		setState(state)
+		//setState(state.cart.push(productItemData))
+		
+		console.log(state.cart)
+	}
 	
 
 	return (
@@ -28,7 +34,7 @@ const App = () => {
 
 			<div className="container pb-5">
 				<div className="row">
-					{state.items.map(item => <ProductItem  itemData={item}/>)}
+					{state.items.map(item => <ProductItem key={item.name} parentCallback={addToCartCallback}  itemData={item}/>)}
 				</div>
 			</div>
 

@@ -32,11 +32,6 @@
             "name": "Item 1",
             "price": 14.2,
             "type": "Music"
-        },
-        {
-            "name": "Item 2",
-            "price": 11.2,
-            "type": "Music"
         }
 
     ],
