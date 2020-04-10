@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const ProductItem = (props) =>  {
     //console.log(props.itemData);
@@ -6,8 +6,8 @@ const ProductItem = (props) =>  {
     const { name, price, type } = props.itemData;
 
     const AddToCartButton = (props) => {
-        if (props.added == 'added') {
-            return <p className="add-to-cart" onClick={removeOfCart}>Añadido</p>
+        if (props.added === 'added') {
+            return <p className="add-to-cart" onClick={removeOfCart}><i className="fas fa-shopping-cart"></i></p>
         } else {
             return <p className="add-to-cart" onClick={addToCart}>Add to Cart</p>
         }
@@ -15,17 +15,14 @@ const ProductItem = (props) =>  {
 
     // Dentro de addToCart podemos pasarle la info al componente padre y que el administre la guardada al carrito
     const addToCart = () => {
-        
         setproductAdded('added');
         // sending the children componente data to the parent component
-        props.parentCallback(props.itemData);
-        console.log(productAdded);
+        props.parentCallback(props.itemData, 'add');
     }
 
     const removeOfCart = () => {
         setproductAdded(false);
-        console.log(productAdded);
-        props.parentCallback(props.itemData);
+        props.parentCallback(props.itemData, 'remove');
     }
 
     // De forma similar a componentDidMount y componentDidUpdate
