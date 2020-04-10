@@ -4,24 +4,11 @@ const NavBar = (props) =>  {
     
     const [cartActive, setCartActive] = useState(props.cartActive)
 
-    console.log('cartActive');
-    console.log(cartActive);
-
     const toggleCart = (e) => {
         e.preventDefault();
 
-        let test = !cartActive;
-
-        if (test) {
-            console.log('el carrito esta activo')
-        } else {
-            console.log('el carrito esta inactivo')
-        }
-
-        setCartActive(test)
-        
-        //setCartActive(cartActive)
-        props.toggleMiniCart(test);
+        setCartActive(!cartActive)
+        props.toggleMiniCart(!cartActive);
     }
 
     return (
