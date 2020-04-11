@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import NavBar from './components/NavBar';
-import ProductItem from './components/ProductItem';
+import Item from './components/Item';
 import './styles/custom/global.css';
 import MiniCart from './components/MiniCart';
 import shopData from './shop-data.json';
@@ -16,10 +16,42 @@ const App = () => {
 		
 	}
 
-	const addToCartCallback = (productItemData, action) => {
-		state.cart.push(productItemData)
-		setState(state)
-		//setState(state.cart.push(productItemData))
+	const cartItemActions = (itemData, action) => {
+
+		console.log('cartItemActions - App');
+		console.log(state.items)
+		console.log('---------------------')
+
+		for (var i = 0; i < state.items.length; i++) {
+			
+			if (state.items[i].id == itemData.id) {
+				
+				/* if (action === 'add') {
+					state.items[i].in_cart = true;
+					//state.items.push(itemData)
+					console.log(state.items)
+
+				} else if (action === 'remove'){
+					state.items[i].in_cart = false;
+				} */
+
+				switch (action) {
+					case 'add':
+						state.items[i].in_cart = true;
+						break;
+					case 'remove': 
+						state.items[i].in_cart = false;
+						break;
+				}
+				
+
+			}
+		}
+		
+		setState(state);
+		console.log(state)
+		
+		//setState(state.items.push(itemData))
 	}
 
 	const NavBarHandler = () => {
@@ -28,11 +60,40 @@ const App = () => {
 	}
 
 	const MiniCartHandler = () => {
+		let itemsInCart = [];
+		
+		state.items.map( item => {
+			if (item.in_cart) {
+				itemsInCart.push(item);
+			}
+		})
 
-		return <MiniCart showCart={showCart} items={state.cart} closeCallback={toggleMiniCart} />
+		return (
+			<MiniCart 
+				showCart={showCart} 
+				items={itemsInCart} 
+				closeCallback={toggleMiniCart} 
+				cartItemActionsCallback={cartItemActions} 
+			/>
+		)
 
 	}
 	
+	const ItemsHandler = () => {
+
+		return (
+			state.items.map(item =>
+				
+				<Item
+					key={item.name}
+					cartItemActionsCallback={cartItemActions}
+					toggleMiniCartCallback={toggleMiniCart}
+					itemData={item}
+					inCart={item.in_cart}
+				/>
+			)
+		)
+	}
 
 
 	return (
@@ -49,7 +110,7 @@ const App = () => {
 
 				<div className="container pb-5">
 					<div className="row">
-						{state.items.map(item => <ProductItem key={item.name} parentCallback={addToCartCallback}  itemData={item}/>)}
+						<ItemsHandler />
 					</div>
 				</div>
 
@@ -64,7 +125,7 @@ const App = () => {
 				</div>
 			</div>
 
-			<MiniCartHandler showCart={showCart} items={state.cart} closeCallback={toggleMiniCart}/>
+			<MiniCartHandler/>
 
 		</div>
 	)

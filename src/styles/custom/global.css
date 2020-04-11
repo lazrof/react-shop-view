@@ -2,13 +2,13 @@
 	color: #9B5D00;
 }
 
-.product-info {
+.item-info {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.product-info p {
+.item-info p {
     width: 100%;
     text-align: center;
     height: 55px;
@@ -18,7 +18,7 @@
 	margin-bottom: 0;
 }
 
-.product-info p.add-to-cart:hover {
+.item-info p.add-to-cart:hover {
 	border: none;
 	cursor: pointer;
 	transition: all .5s;
@@ -32,13 +32,13 @@
 }
 
 
-.product-info .price {
+.item-info .price {
 	padding-left: 5px;
 	font-size: 22px;
 }
 
 
-p.product-cat {
+p.item-cat {
 	padding: 5px;
     text-align: center;
 	color: #9B5D00;

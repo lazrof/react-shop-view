@@ -4,29 +4,49 @@ import MiniCartItem from './MiniCartItem';
 const MiniCart = (props) => {
 
     const [show, setShow] = useState(props.showCart)
-    const [miniCartItems, setMiniCartItems] = useState(props.items)
+    /* const [miniCartItems, setMiniCartItems] = useState(props.items) */
     
     let showClassNames  = show ? 'modal show' : 'modal';
 
-    const closeMiniCartFromOutside = (event) => {
+    const closeMiniCart = (event) => {
         
-        if (event.target.id === 'cart') {
+        // Minicart will close if, click if outside of Cart or in the close <span>
+        if (event.target.id === 'cart' || event.target.id === 'close') {
             setShow(false);
             props.closeCallback(false);
-            //console.log('closing mini cart');
-        } 
+        }
         
     }
 
+    const itemActions = (itemData, action) => {
+        props.cartItemActionsCallback(itemData, 'remove');
+        
+    }
+
+    const MiniCartItemsHandler = () => {
+        return (
+            props.items.map(item => {
+
+                if (item.in_cart){
+                    return (<MiniCartItem
+                        key={item.name}
+                        cartItemActionsCallback={itemActions}
+                        itemData={item}
+                    />)
+                }
+            })
+        )
+    }
+
     return (
-        <div id="cart" className={showClassNames} onClick={closeMiniCartFromOutside}>
+        <div id="cart" className={showClassNames} onClick={closeMiniCart}>
             <div className="modal-content col-md-6" >
                 <div className="cart-header">
                     <h3>Cart</h3>
-                    <span className="close">&times;</span>
+                    <span id="close" className="close">&times;</span>
                 </div>
                 <div className="cart-body">
-                    {miniCartItems.map(item => <MiniCartItem key={item.name} />)}
+                    <MiniCartItemsHandler />
                 </div>
             </div>
         </div>

@@ -1,39 +1,40 @@
 {
     "items":[
         {
+            "id": 1,
             "name":"Item 1",
             "price": 14.2,
-            "type": "Music"
+            "type": "Music",
+            "in_cart":false
         },
         {
+            "id": 2,
             "name": "Item 2",
             "price": 11.2,
-            "type": "Music"
+            "type": "Music",
+            "in_cart":false
         },
         {
+            "id": 3,
             "name": "Item 3",
             "price": 3.2,
-            "type": "Music"
+            "type": "Music",
+            "in_cart":false
         },
         {
+            "id": 4,
             "name": "Item 4",
             "price": 12,
-            "type": "Music"
+            "type": "Music",
+            "in_cart":true
         },
         {
+            "id": 5,
             "name": "Item 5",
             "price": 35.2,
-            "type": "Music"
+            "type": "Music",
+            "in_cart":false
         }
-    ],
-
-    "cart": [
-        {
-            "name": "Item 1",
-            "price": 14.2,
-            "type": "Music"
-        }
-
     ],
 
     "customer":{
