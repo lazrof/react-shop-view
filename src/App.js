@@ -18,7 +18,7 @@ const App = () => {
 
 	const cartItemActions = (itemData, action) => {
 
-		console.log('cartItemActions - App');
+		console.log('##cartItemActions - App');
 		console.log(state.items)
 		console.log('---------------------')
 
