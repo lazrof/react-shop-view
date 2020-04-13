@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-shop-view/static/css/main.9010adcb.chunk.css",
+    "main.js": "/react-shop-view/static/js/main.202eff13.chunk.js",
+    "main.js.map": "/react-shop-view/static/js/main.202eff13.chunk.js.map",
+    "runtime-main.js": "/react-shop-view/static/js/runtime-main.141dcdf1.js",
+    "runtime-main.js.map": "/react-shop-view/static/js/runtime-main.141dcdf1.js.map",
+    "static/js/2.2ac2d041.chunk.js": "/react-shop-view/static/js/2.2ac2d041.chunk.js",
+    "static/js/2.2ac2d041.chunk.js.map": "/react-shop-view/static/js/2.2ac2d041.chunk.js.map",
+    "index.html": "/react-shop-view/index.html",
+    "precache-manifest.de71f7c388af6d5d91622d8fa0f6ab29.js": "/react-shop-view/precache-manifest.de71f7c388af6d5d91622d8fa0f6ab29.js",
+    "service-worker.js": "/react-shop-view/service-worker.js",
+    "static/css/main.9010adcb.chunk.css.map": "/react-shop-view/static/css/main.9010adcb.chunk.css.map",
+    "static/js/2.2ac2d041.chunk.js.LICENSE.txt": "/react-shop-view/static/js/2.2ac2d041.chunk.js.LICENSE.txt",
+    "static/media/daft-punk.jpg": "/react-shop-view/static/media/daft-punk.26353003.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.141dcdf1.js",
+    "static/js/2.2ac2d041.chunk.js",
+    "static/css/main.9010adcb.chunk.css",
+    "static/js/main.202eff13.chunk.js"
+  ]
+}
