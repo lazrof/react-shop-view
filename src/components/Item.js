@@ -30,9 +30,6 @@ const Item = (props) =>  {
         props.cartItemActionsCallback(props.itemData, 'remove');
     }
 
-    // De forma similar a componentDidMount y componentDidUpdate
-
-    //sendData();
     return(
         <div className="col-md-4">
             <div className="item py-3">
