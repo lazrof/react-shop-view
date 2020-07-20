@@ -4,7 +4,6 @@ import MiniCartItem from './MiniCartItem';
 const MiniCart = (props) => {
 
     const [show, setShow] = useState(props.showCart)
-    /* const [miniCartItems, setMiniCartItems] = useState(props.items) */
     
     let showClassNames  = show ? 'modal show' : 'modal';
 

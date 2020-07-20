@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Shop from './components/Shop/Shop';
 import MyStore from './components/MyStore/MyStore';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { connect } from 'react-redux';
 
 const App = () => {
 	

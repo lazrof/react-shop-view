@@ -25,11 +25,6 @@ const Item = (props) =>  {
         props.cartItemActionsCallback(props.itemData, 'add');
     }
 
-    const removeOfCart = () => {
-        setItemAdded(false);
-        props.cartItemActionsCallback(props.itemData, 'remove');
-    }
-
     return(
         <div className="col-md-4">
             <div className="item py-3">

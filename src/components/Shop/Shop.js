@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavBar from '../NavBar';
+import NavBar from '../NavBar/NavBar';
 import Item from '../Item';
 import MiniCart from '../MiniCart';
 import shopData from '../../shop-data.json';
@@ -17,22 +17,9 @@ const App = () => {
 
 	const cartItemActions = (itemData, action) => {
 
-		console.log('cartItemActions - App');
-		console.log(state.items)
-		console.log('---------------------')
-
 		for (var i = 0; i < state.items.length; i++) {
 			
-			if (state.items[i].id == itemData.id) {
-				
-				/* if (action === 'add') {
-					state.items[i].in_cart = true;
-					//state.items.push(itemData)
-					console.log(state.items)
-
-				} else if (action === 'remove'){
-					state.items[i].in_cart = false;
-				} */
+			if (state.items[i].id === itemData.id) {
 
 				switch (action) {
 					case 'add':
@@ -41,6 +28,9 @@ const App = () => {
 					case 'remove': 
 						state.items[i].in_cart = false;
 						break;
+
+					default:
+						
 				}
 				
 
@@ -48,9 +38,7 @@ const App = () => {
 		}
 		
 		setState(state);
-		console.log(state)
-		
-		//setState(state.items.push(itemData))
+
 	}
 
 	const NavBarHandler = () => {
@@ -61,7 +49,7 @@ const App = () => {
 	const MiniCartHandler = () => {
 		let itemsInCart = [];
 		
-		state.items.map( item => {
+		state.items.forEach( item => {
 			if (item.in_cart) {
 				itemsInCart.push(item);
 			}

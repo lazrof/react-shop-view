@@ -20,7 +20,11 @@ const MiniCartItem = (props) => {
                 </div>
                 <div className="col-4">
                     <div className="item-col">
-                        <p>{name}</p>
+                        <div className="d-flex flex-column">
+                            <h4>{name}</h4>
+                            <small>{price}</small>
+                            <small>{type}</small>
+                        </div>
                     </div>
                 </div>
                 <div className="col-3">
