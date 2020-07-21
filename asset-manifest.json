@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-shop-view/app/static/css/main.f60c99db.chunk.css",
-    "main.js": "/react-shop-view/app/static/js/main.6ffe87b7.chunk.js",
-    "main.js.map": "/react-shop-view/app/static/js/main.6ffe87b7.chunk.js.map",
-    "runtime-main.js": "/react-shop-view/app/static/js/runtime-main.1ebb7385.js",
-    "runtime-main.js.map": "/react-shop-view/app/static/js/runtime-main.1ebb7385.js.map",
-    "static/css/2.829c9cb5.chunk.css": "/react-shop-view/app/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.c67e3d08.chunk.js": "/react-shop-view/app/static/js/2.c67e3d08.chunk.js",
-    "static/js/2.c67e3d08.chunk.js.map": "/react-shop-view/app/static/js/2.c67e3d08.chunk.js.map",
-    "index.html": "/react-shop-view/app/index.html",
-    "precache-manifest.494abd7e6b49b08df5393f8025097abf.js": "/react-shop-view/app/precache-manifest.494abd7e6b49b08df5393f8025097abf.js",
-    "service-worker.js": "/react-shop-view/app/service-worker.js",
-    "static/css/2.829c9cb5.chunk.css.map": "/react-shop-view/app/static/css/2.829c9cb5.chunk.css.map",
-    "static/css/main.f60c99db.chunk.css.map": "/react-shop-view/app/static/css/main.f60c99db.chunk.css.map",
-    "static/js/2.c67e3d08.chunk.js.LICENSE.txt": "/react-shop-view/app/static/js/2.c67e3d08.chunk.js.LICENSE.txt",
-    "static/media/daft-punk.jpg": "/react-shop-view/app/static/media/daft-punk.26353003.jpg",
-    "static/media/harina-pan.png": "/react-shop-view/app/static/media/harina-pan.5707cd1e.png"
+    "main.css": "/react-shop-view/static/css/main.f60c99db.chunk.css",
+    "main.js": "/react-shop-view/static/js/main.f832a879.chunk.js",
+    "main.js.map": "/react-shop-view/static/js/main.f832a879.chunk.js.map",
+    "runtime-main.js": "/react-shop-view/static/js/runtime-main.b6d46edb.js",
+    "runtime-main.js.map": "/react-shop-view/static/js/runtime-main.b6d46edb.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/react-shop-view/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.84ad5b0e.chunk.js": "/react-shop-view/static/js/2.84ad5b0e.chunk.js",
+    "static/js/2.84ad5b0e.chunk.js.map": "/react-shop-view/static/js/2.84ad5b0e.chunk.js.map",
+    "index.html": "/react-shop-view/index.html",
+    "precache-manifest.0f26fd6a983798821e324952a3b1451e.js": "/react-shop-view/precache-manifest.0f26fd6a983798821e324952a3b1451e.js",
+    "service-worker.js": "/react-shop-view/service-worker.js",
+    "static/css/2.829c9cb5.chunk.css.map": "/react-shop-view/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.f60c99db.chunk.css.map": "/react-shop-view/static/css/main.f60c99db.chunk.css.map",
+    "static/js/2.84ad5b0e.chunk.js.LICENSE.txt": "/react-shop-view/static/js/2.84ad5b0e.chunk.js.LICENSE.txt",
+    "static/media/daft-punk.jpg": "/react-shop-view/static/media/daft-punk.26353003.jpg",
+    "static/media/harina-pan.png": "/react-shop-view/static/media/harina-pan.5707cd1e.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1ebb7385.js",
+    "static/js/runtime-main.b6d46edb.js",
     "static/css/2.829c9cb5.chunk.css",
-    "static/js/2.c67e3d08.chunk.js",
+    "static/js/2.84ad5b0e.chunk.js",
     "static/css/main.f60c99db.chunk.css",
-    "static/js/main.6ffe87b7.chunk.js"
+    "static/js/main.f832a879.chunk.js"
   ]
 }
