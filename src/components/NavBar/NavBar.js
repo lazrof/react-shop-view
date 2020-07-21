@@ -20,7 +20,7 @@ const NavBar = (props) =>  {
                     <i className="fas fa-shopping-cart"></i>
                 </button>
                 <Link className="btn btn-secondary" to="/my-store">
-                    <i className="fas fa-cog"></i>
+                    My Store
                 </Link>
             </nav>
         </div>
