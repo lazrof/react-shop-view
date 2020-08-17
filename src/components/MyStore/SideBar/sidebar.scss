@@ -3,6 +3,8 @@ $purple-secondary: #A45CF2;
 $warning: #ffc107;
 
 .side-bar {
+    position: fixed;
+    height: 95%;
     background-color: #54A62E;
     border-radius: 5px;
     padding: 1em;
@@ -10,7 +12,7 @@ $warning: #ffc107;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 600px;
+    min-height: 600px;
     box-shadow:
         0 1.2px 2.2px rgba(0, 0, 0, 0.02),
         0 2.8px 5.3px rgba(0, 0, 0, 0.028),
@@ -22,7 +24,7 @@ $warning: #ffc107;
 
     .box {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         background-color: #fff;
         color: #343a40;
         padding: 8px 15px;
@@ -74,16 +76,3 @@ $warning: #ffc107;
 }
 
 
-.pressDownButton {
-    background-color: hsl(222, 100%, 95%);
-    padding: 12px 24px;
-    color: hsl(243, 80%, 62%);
-    border-radius: 6px;
-    border-bottom: 4px solid hsl(221, 89%, 85%);
-    transition: all 0.1s ease-in-out;
-}
-
-.pressDownButton:hover {
-    border-bottom-width: 0;
-    margin-top: 3px;
-}
