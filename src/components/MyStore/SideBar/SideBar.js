@@ -1,8 +1,16 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { setDashboardView } from '../../../redux/actions/my-store/my-store';
 import './sidebar.scss';
-/* import { connect } from 'react-redux'; */
+
 
 const SideBar = (props) =>  {
+
+    const setView = (event) => {
+        console.log('click setView');
+        console.log(event.target.id)
+        props.setDashboardView(event.target.id);
+    }
 
     return (
         <>
@@ -14,15 +22,15 @@ const SideBar = (props) =>  {
                     </div>
                     <h4>Abasto Rio Verde</h4>
                 </div>
-                <div className="box hover clickable">
+                <button id="productsView" className="box hover clickable" onClick={setView}>
                     <p>Productos</p>
-                </div>
-                <div className="box hover clickable">
+                </button>
+                <button id="ordersView" className="box hover clickable" onClick={setView}>
                     <p>Pedidos</p>
-                </div>
-                <div className="box hover clickable">
+                </button>
+                <button id="ordersView" className="box hover clickable" onClick={setView}>
                     <p>Ajustes</p>
-                </div>
+                </button>
             </div>
             <div className="bottom-items">
                 <div className="box clickable inverted">
@@ -34,5 +42,16 @@ const SideBar = (props) =>  {
     )
 }
 
-
-export default SideBar;
+// const mapStateToProps = state => {
+//     return {
+//       serverResponse: state.userReducer.response,
+//       isAuthenticated: state.userReducer.authenticated,
+//       registerSuccess: state.userReducer.registerSuccess
+//     };
+// }
+  
+const mapDispatchToProps = {
+    setDashboardView
+}
+  
+export default connect(null, mapDispatchToProps)(SideBar);

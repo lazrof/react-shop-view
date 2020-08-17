@@ -1,10 +1,28 @@
 import React from 'react';
+import { connect } from "react-redux";
 import SideBar from './SideBar/SideBar';
 import ProductsContainer from './ProductsContainer/ProductsContainer';
 import OrdersGrid from './OrdersGrid/OrdersGrid';
 /* import { connect } from 'react-redux'; */
 
 const MyStore = (props) =>  {
+
+    const Views = () => {
+        console.log(props.currentView)
+        switch (props.currentView) {
+            case 'productsView':
+                return <ProductsContainer />
+                break;
+
+            case 'ordersView':
+                return <OrdersGrid />
+                break;
+        
+            default:
+                return ''
+                break;
+        }
+    }
 
     return (
         <>
@@ -14,8 +32,7 @@ const MyStore = (props) =>  {
                     <SideBar />
                 </div>
                 <div className="col-7 col-md-9">
-                    {/* <ProductsContainer /> */}
-                    <OrdersGrid />
+                    <Views />
                 </div>
             </div>
         </div>
@@ -23,5 +40,12 @@ const MyStore = (props) =>  {
     )
 }
 
+const mapStateToProps = state => {
+    return {
+      currentView: state.myStoreReducer.currentView,
+    };
+}
+  
+export default connect(mapStateToProps, null)(MyStore);
 
-export default MyStore;
+//export default MyStore;
