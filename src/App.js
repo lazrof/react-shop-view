@@ -1,17 +1,17 @@
 import React from 'react';
 import Shop from './components/Shop/Shop';
 import MyStore from './components/MyStore/MyStore';
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
 	
 	return(
 	<div className="App">
 		<Router>
-			<Switch>
-				<Route exact path="/" component={Shop} />
-				<Route exact path="/my-store" component={MyStore} />
-			</Switch>
+			<Routes>
+				<Route path="/" element={<Shop />}></Route>
+				<Route path="/my-store" element={<MyStore />}></Route>
+			</Routes>
 		</Router>
 	</div>
 	)
